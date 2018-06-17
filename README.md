@@ -16,4 +16,4 @@ npm run storybook
 
 ## Demo
 
-https://narr.github.io/narr-material-ui
+https://narr.github.io/narr-material-ui/
