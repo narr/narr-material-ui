@@ -60,6 +60,9 @@ typings/
 # next.js build output
 .next
 
+# Lockfiles
+package-lock.json
+
 # VSC
 .history
 
