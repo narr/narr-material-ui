@@ -1,17 +1,19 @@
 {
-  "name": "narr-material-ui",
+  "name": "narr-material-ui-core",
   "version": "0.1.0",
-  "description": "My UI components using Typescript+React+Material-UI",
+  "description": "narr-material-ui-core",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/narr/narr-material-ui.git"
   },
-  "author": "https://github.com/narr",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/narr/narr-material-ui/issues"
   },
-  "homepage": "https://github.com/narr/narr-material-ui#readme",
+  "peerDependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
   "devDependencies": {
     "@storybook/react": "^3.4.7",
     "@types/react": "^16.3.18",
@@ -19,23 +21,12 @@
     "@types/storybook__addon-actions": "^3.0.3",
     "@types/storybook__react": "^3.0.7",
     "babel-core": "^6.26.3",
-    "eslint": "^4.19.1",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-prettier": "^2.6.0",
-    "lerna": "^2.11.0",
-    "prettier": "^1.13.5",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "ts-loader": "^3.5.0",
-    "tslint": "^5.10.0",
-    "tslint-config-prettier": "^1.13.0",
-    "tslint-plugin-prettier": "^1.3.0",
-    "tslint-react": "^3.6.0",
     "typescript": "^2.9.2"
   },
   "scripts": {
-    "bootstrap": "lerna bootstrap --hoist",
     "storybook": "start-storybook -p 9001 -c .storybook"
-  },
-  "private": true
+  }
 }
