@@ -7,7 +7,10 @@ module.exports = (baseConfig, env, defaultConfig) => {
   defaultConfig.module.rules.push({
     test: /\.(ts|tsx)$/,
     include: path.resolve(__dirname, '../packages'),
-    loader: require.resolve('ts-loader'),
+    use: [
+      require.resolve('ts-loader'),
+      require.resolve('react-docgen-typescript-loader'),
+    ],
   });
   defaultConfig.resolve.extensions.push('.ts', '.tsx');
 

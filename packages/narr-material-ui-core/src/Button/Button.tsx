@@ -1,11 +1,16 @@
 import * as React from 'react';
 
-function Button(props: any) {
+function Button({ onClick, children }: IProps) {
   return (
     <div className="foo">
-      <button onClick={props.onClick}>{props.children}</button>
+      <button onClick={onClick}>{children}</button>
     </div>
   );
+}
+
+interface IProps {
+  children: JSX.Element | string;
+  onClick(): void;
 }
 
 export default Button;
