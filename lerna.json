@@ -1,7 +1,10 @@
 {
   "lerna": "2.11.0",
-  "packages": [
-    "packages/*"
-  ],
-  "version": "independent"
+  "packages": ["packages/*"],
+  "version": "independent",
+  "command": {
+    "bootstrap": {
+      "hoist": true
+    }
+  }
 }
