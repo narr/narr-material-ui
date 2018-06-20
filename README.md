@@ -6,6 +6,7 @@ My UI components using Typescript+React+Material-UI
 
 ```sh
 npm i
+npm run bootstrap
 ```
 
 ## Development
