@@ -5,12 +5,27 @@ import Button from './Button';
 
 storiesOf('Core/Button', module)
   .add('with text', () => (
-    <Button onClick={action('clicked')}>Hello Button</Button>
+    <div
+      className="wrapper"
+      style={{ border: '1px solid #eee', padding: '20px' }}
+    >
+      <span className="text">some info</span>
+      <br />
+      <br />
+      <Button onClick={action('button-clicked')}>Hello Button</Button>
+    </div>
   ))
   .add('with some emoji', () => (
-    <Button onClick={action('clicked')}>
-      <span role="img" aria-label="so cool">
-        😀 😎 👍 💯
+    <div className="wrapper" style={{ background: '#444', padding: '20px' }}>
+      <span className="text" style={{ color: '#fff' }}>
+        some info
       </span>
-    </Button>
+      <br />
+      <br />
+      <Button onClick={action('emoji-button-clicked')}>
+        <span role="img" aria-label="so cool">
+          😀 😎 👍 💯
+        </span>
+      </Button>
+    </div>
   ));
