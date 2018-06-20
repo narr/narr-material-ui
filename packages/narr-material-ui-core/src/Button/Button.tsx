@@ -1,15 +1,24 @@
 import * as React from 'react';
 
-function Button({ onClick, children }: IProps) {
+// React.SFC is alias of React.StatelessComponent
+const Button: React.SFC<IProps> = ({ onClick, children, bg }) => {
   return (
     <div className="foo">
-      <button onClick={onClick}>{children}</button>
+      <button style={{ background: bg }} onClick={onClick}>
+        {children}
+      </button>
     </div>
   );
-}
+};
+
+Button.defaultProps = {
+  bg: '#ffa',
+};
 
 interface IProps {
   children: JSX.Element | string;
+  /** background color */
+  bg?: string;
   onClick(): void;
 }
 

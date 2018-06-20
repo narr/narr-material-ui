@@ -1,5 +1,6 @@
 import { addDecorator, configure } from '@storybook/react';
 import { setDefaults, withInfo } from '@storybook/addon-info';
+import { withKnobs } from '@storybook/addon-knobs/react';
 
 // addon-info
 setDefaults({
@@ -7,6 +8,7 @@ setDefaults({
 });
 
 addDecorator((story, context) => withInfo()(story)(context));
+addDecorator(withKnobs);
 
 const req = require.context('../src', true, /\.stories\.tsx$/);
 

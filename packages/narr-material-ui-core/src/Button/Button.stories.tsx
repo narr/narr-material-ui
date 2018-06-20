@@ -1,4 +1,5 @@
 import { action } from '@storybook/addon-actions';
+import { color, text } from '@storybook/addon-knobs/react';
 import { storiesOf } from '@storybook/react';
 import * as React from 'react';
 import Button from './Button';
@@ -12,7 +13,9 @@ storiesOf('Core/Button', module)
       <span className="text">some info</span>
       <br />
       <br />
-      <Button onClick={action('button-clicked')}>Hello Button</Button>
+      <Button onClick={action('button-clicked')}>
+        {text('Label', 'Hello Storybook')}
+      </Button>
     </div>
   ))
   .add('with some emoji', () => (
@@ -22,7 +25,10 @@ storiesOf('Core/Button', module)
       </span>
       <br />
       <br />
-      <Button onClick={action('emoji-button-clicked')}>
+      <Button
+        bg={color('color', '#00ffaf')}
+        onClick={action('emoji-button-clicked')}
+      >
         <span role="img" aria-label="so cool">
           😀 😎 👍 💯
         </span>
