@@ -18,6 +18,9 @@
     "@storybook/addon-info": "^3.4.7",
     "@storybook/addon-knobs": "^3.4.7",
     "@storybook/react": "^3.4.7",
+    "@types/enzyme": "^3.1.10",
+    "@types/enzyme-adapter-react-16": "^1.0.2",
+    "@types/jest": "^23.1.1",
     "@types/node": "^10.3.4",
     "@types/react": "^16.4.1",
     "@types/react-dom": "^16.0.6",
@@ -26,13 +29,50 @@
     "@types/storybook__addon-knobs": "^3.3.1",
     "@types/storybook__react": "^3.0.7",
     "babel-core": "^6.26.3",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest": "^23.1.0",
+    "jest-environment-enzyme": "^6.0.2",
+    "jest-enzyme": "^6.0.2",
     "react": "^16.4.1",
     "react-docgen-typescript-loader": "^2.1.1",
     "react-dom": "^16.4.1",
+    "ts-jest": "^22.4.6",
     "ts-loader": "^3.5.0",
     "typescript": "^2.9.2"
   },
   "scripts": {
+    "test": "jest --watch --coverage",
     "storybook": "start-storybook -p 9001 -c .storybook"
+  },
+  "jest": {
+    "testRegex": "(/__tests__/.*|src/.*?(\\.|/)(test|spec))\\.tsx?$",
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "./tsconfig.json",
+        "babelConfig": {
+          "presets": [
+            "env"
+          ]
+        }
+      }
+    },
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!**/*.stories.{ts,tsx}"
+    ],
+    "setupTestFrameworkScriptFile": "jest-enzyme",
+    "testEnvironment": "enzyme"
   }
 }
