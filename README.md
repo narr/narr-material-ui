@@ -12,7 +12,6 @@ npm i -g npx
 
 ```sh
 npm i
-npm run bootstrap or npx lerna bootstrap
 ```
 
 ## Development

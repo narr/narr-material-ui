@@ -26,7 +26,7 @@
     "tslint-react": "^3.6.0"
   },
   "scripts": {
-    "bootstrap": "lerna bootstrap",
+    "postinstall": "lerna bootstrap",
     "test": "jest --watch --coverage",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "precommit": "lint-staged"
