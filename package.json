@@ -29,7 +29,8 @@
     "postinstall": "lerna bootstrap",
     "test": "jest --watch --coverage",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "build:storybook": "build-storybook -c .storybook -o docs/storybook"
   },
   "private": true,
   "lint-staged": {
