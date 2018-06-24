@@ -27,11 +27,13 @@
   },
   "scripts": {
     "postinstall": "lerna bootstrap",
-    "test": "jest --watch --coverage",
+    "test": "jest --coverage",
+    "test:watch": "npm run test -- --watch",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "precommit": "lint-staged",
+    "build:test": "npm run test",
     "build:storybook": "build-storybook -c .storybook -o docs/storybook",
-    "build": "npm run build:storybook"
+    "build": "npm run build:test && npm run build:storybook"
   },
   "private": true,
   "lint-staged": {
@@ -67,6 +69,7 @@
       "packages/**/src/**/*.{ts,tsx}",
       "!**/*.stories.{ts,tsx}"
     ],
+    "coverageDirectory": "./docs/coverage",
     "setupTestFrameworkScriptFile": "jest-enzyme",
     "testEnvironment": "enzyme"
   }
