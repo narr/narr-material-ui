@@ -1,13 +1,12 @@
+import MuiButton from '@material-ui/core/Button';
 import * as React from 'react';
 
 // React.SFC is alias of React.StatelessComponent
-const Button: React.SFC<IProps> = ({ onClick, children, bg }) => {
+const Button: React.SFC<IProps> = ({ children, bg, onClick }) => {
   return (
-    <div className="foo">
-      <button style={{ background: bg }} onClick={onClick}>
-        {children}
-      </button>
-    </div>
+    <MuiButton style={{ background: bg }} onClick={onClick} variant="contained">
+      {children}
+    </MuiButton>
   );
 };
 
