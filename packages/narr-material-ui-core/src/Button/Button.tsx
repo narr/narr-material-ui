@@ -1,24 +1,30 @@
 import MuiButton from '@material-ui/core/Button';
 import * as React from 'react';
+import styled from 'styled-components';
+
+interface IProps {
+  /** background color */
+  bg?: string;
+  onClick(): void;
+}
+
+const StyledMuiButton = styled(MuiButton)<IProps>`
+  && {
+    background: ${props => props.bg};
+  }
+`;
 
 // React.SFC is alias of React.StatelessComponent
-const Button: React.SFC<IProps> = ({ children, bg, onClick }) => {
+const Button: React.SFC<IProps> = ({ children, onClick, bg }) => {
   return (
-    <MuiButton style={{ background: bg }} onClick={onClick} variant="contained">
+    <StyledMuiButton onClick={onClick} bg={bg} variant="contained">
       {children}
-    </MuiButton>
+    </StyledMuiButton>
   );
 };
 
 Button.defaultProps = {
   bg: '#ffa',
 };
-
-interface IProps {
-  children: JSX.Element | string;
-  /** background color */
-  bg?: string;
-  onClick(): void;
-}
 
 export default Button;
