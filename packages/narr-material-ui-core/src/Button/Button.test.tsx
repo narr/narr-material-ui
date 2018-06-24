@@ -7,6 +7,6 @@ describe('<Button />', () => {
     const mockFn = jest.fn();
     const childrenProp = 'this is children text';
     const wrapper = shallow(<Button onClick={mockFn}>{childrenProp}</Button>);
-    expect(wrapper.childAt(0).text()).toBe(childrenProp);
+    expect(wrapper.render().text()).toBe(childrenProp);
   });
 });
