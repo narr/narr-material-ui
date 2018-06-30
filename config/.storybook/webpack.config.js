@@ -6,9 +6,14 @@ module.exports = (baseConfig, env, defaultConfig) => {
   // For example, add typescript loader:
   defaultConfig.module.rules.push({
     test: /\.(ts|tsx)$/,
-    include: path.resolve(__dirname, '../packages'),
+    include: path.resolve(__dirname, '../../packages'),
     use: [
-      require.resolve('ts-loader'),
+      {
+        loader: 'ts-loader',
+        options: {
+          configFile: path.resolve(__dirname, '../typescript/tsconfig.json'),
+        },
+      },
       require.resolve('react-docgen-typescript-loader'),
     ],
   });
