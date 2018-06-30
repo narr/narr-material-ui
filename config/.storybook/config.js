@@ -84,7 +84,7 @@ addDecorator((story, context) => withInfo()(story)(context));
 // this should be placed after withInfo decorator to show Story Source correctly
 addDecorator(withKnobs);
 
-const req = require.context('../packages', true, /\.stories\.tsx$/);
+const req = require.context('../../packages', true, /\.stories\.tsx$/);
 
 function loadStories() {
   req.keys().forEach(filename => req(filename));

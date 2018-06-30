@@ -27,13 +27,14 @@
   },
   "scripts": {
     "postinstall": "lerna bootstrap",
-    "test": "jest --coverage",
-    "test:watch": "npm run test -- --watch",
-    "storybook": "start-storybook -p 9001 -c .storybook",
+    "lint": "tslint && eslint",
     "precommit": "lint-staged",
-    "build:test": "npm run test",
-    "build:storybook": "build-storybook -c .storybook -o docs/storybook",
-    "build": "npm run build:test && npm run build:storybook"
+    "test": "jest --config=./config/jest/jest.config.js --watch --coverage",
+    "test:build": "jest --config=./config/jest/jest.config.prod.js --coverage",
+    "test:ci": "npm run test:build",
+    "storybook": "start-storybook -p 9001 -c ./config/.storybook",
+    "storybook:build": "build-storybook -c ./config/.storybook -o ./docs/storybook",
+    "build": "npm run lint && npm run test:ci && npm run storybook:build"
   },
   "private": true,
   "lint-staged": {
@@ -41,36 +42,5 @@
       "prettier --write",
       "git add"
     ]
-  },
-  "jest": {
-    "testRegex": "(/__tests__/.*|packages/.*?(\\.|/)(test|spec))\\.tsx?$",
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ],
-    "globals": {
-      "ts-jest": {
-        "tsConfigFile": "./tsconfig.json",
-        "babelConfig": {
-          "presets": [
-            "env"
-          ]
-        }
-      }
-    },
-    "collectCoverageFrom": [
-      "packages/**/src/**/*.{ts,tsx}",
-      "!**/*.stories.{ts,tsx}"
-    ],
-    "coverageDirectory": "./docs/coverage",
-    "setupTestFrameworkScriptFile": "jest-enzyme",
-    "testEnvironment": "enzyme"
   }
 }
