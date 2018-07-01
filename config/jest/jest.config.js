@@ -18,6 +18,14 @@ module.exports = {
     '!**/*.stories.{ts,tsx}',
   ],
   coverageDirectory: './tmp/coverage',
+  coverageThreshold: {
+    global: {
+      statements: 100,
+      branches: 100,
+      functions: 100,
+      lines: 100,
+    },
+  },
   setupTestFrameworkScriptFile: 'jest-enzyme',
   testEnvironment: 'enzyme',
 };
