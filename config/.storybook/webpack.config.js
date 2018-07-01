@@ -11,7 +11,7 @@ module.exports = (baseConfig, env, defaultConfig) => {
       {
         loader: 'ts-loader',
         options: {
-          configFile: path.resolve(__dirname, '../typescript/tsconfig.json'),
+          configFile: path.resolve(__dirname, '../../tsconfig.json'),
         },
       },
       require.resolve('react-docgen-typescript-loader'),

@@ -27,8 +27,10 @@
   },
   "scripts": {
     "postinstall": "lerna bootstrap",
-    "lint": "tslint && eslint",
     "precommit": "lint-staged",
+    "tslint": "tslint -c ./tslint.json -p ./",
+    "eslint": "eslint **/*.js",
+    "lint": "npm run tslint && npm run eslint",
     "test": "jest --config=./config/jest/jest.config.js --watch --coverage",
     "test:build": "jest --config=./config/jest/jest.config.prod.js --coverage",
     "test:ci": "npm run test:build",
