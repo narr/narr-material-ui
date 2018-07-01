@@ -1,0 +1,13 @@
+{
+  "name": "narr-material-ui-common",
+  "version": "0.1.0",
+  "description": "narr-material-ui-common",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/narr/narr-material-ui.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/narr/narr-material-ui/issues"
+  }
+}
