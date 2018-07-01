@@ -8,5 +8,8 @@
   "rules": {
     "prettier": true,
     "max-file-line-count": [true, 400]
+  },
+  "linterOptions": {
+    "exclude": ["**/*.js", "**/tmp/**/*"]
   }
 }
