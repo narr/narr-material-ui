@@ -1,8 +1,9 @@
+const _ = require('lodash');
 const getBaseConfig = require('./jest.config');
 
 module.exports = (cfg = {}) => {
   const baseConfig = getBaseConfig(cfg);
-  const config = Object.assign({}, baseConfig, {
+  const config = _.assign({}, baseConfig, {
     coverageDirectory: './docs/coverage',
     reporters: [
       'default',

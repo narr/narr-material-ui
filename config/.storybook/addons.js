@@ -1,3 +1,1 @@
-import '@storybook/addon-actions/register';
-import '@storybook/addon-knobs/register';
-import '@storybook/addon-options/register';
+import '../../packages/narr-material-ui-common/es6';
