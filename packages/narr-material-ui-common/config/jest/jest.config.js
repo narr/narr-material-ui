@@ -1,4 +1,7 @@
-module.exports = ({ testRootDir = 'src' } = {}) => {
+module.exports = ({
+  testRootDir = 'src',
+  collectCoverageFromRootDir = 'src',
+} = {}) => {
   const config = {
     rootDir: '../../',
     testRegex: `(/__tests__/.*|${testRootDir}/.*?(\\.|/)(test|spec))\\.tsx?$`,
@@ -16,7 +19,7 @@ module.exports = ({ testRootDir = 'src' } = {}) => {
       },
     },
     collectCoverageFrom: [
-      `${testRootDir}/**/src/**/*.{ts,tsx}`,
+      `${collectCoverageFromRootDir}/**/*.{ts,tsx}`,
       '!**/*.stories.{ts,tsx}',
     ],
     coverageDirectory: './tmp/coverage',
