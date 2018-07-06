@@ -10,6 +10,6 @@
     "max-file-line-count": [true, 400]
   },
   "linterOptions": {
-    "exclude": ["**/*.js", "**/tmp/**/*"]
+    "exclude": ["**/*.js", "**/tmp/**/*", "**/.storybook/**/*"]
   }
 }

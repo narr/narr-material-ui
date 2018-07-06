@@ -1,9 +1,11 @@
 module.exports = ({
-  testRootDir = 'src',
-  collectCoverageFromRootDir = 'src',
+  rootDir = '../../',
+  testRootDir = './src',
+  collectCoverageFromRootDir = './src',
+  tsConfigFile = './node_modules/narr-material-ui-common/config/tsconfig.json',
 } = {}) => {
   const config = {
-    rootDir: '../../',
+    rootDir,
     testRegex: `(/__tests__/.*|${testRootDir}/.*?(\\.|/)(test|spec))\\.tsx?$`,
     transform: {
       '^.+\\.tsx?$': 'ts-jest',
@@ -12,7 +14,7 @@ module.exports = ({
     modulePathIgnorePatterns: ['<rootDir>/tmp'],
     globals: {
       'ts-jest': {
-        tsConfigFile: './tsconfig.json',
+        tsConfigFile,
         babelConfig: {
           presets: ['env'],
         },

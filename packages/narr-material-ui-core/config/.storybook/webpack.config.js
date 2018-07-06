@@ -1,11 +1,14 @@
 const path = require('path');
 const commonConfig = require('narr-material-ui-common');
 
-const includePath = path.resolve(__dirname, '../../src');
-let isRunFromMainPackage;
+const includePath = path.join(__dirname, '../../src');
+let tsconfigPath = path.join(
+  __dirname,
+  '../../node_modules/narr-material-ui-common/config/tsconfig.json'
+);
+let isRunFromMainPackage = false;
 try {
-  require('../../node_modules/narr-material-ui-common/config/tsconfig');
-  isRunFromMainPackage = false;
+  require(tsconfigPath);
 } catch (error) {
   /* eslint-disable no-console */
   console.log('================================');
@@ -14,12 +17,8 @@ try {
   /* eslint-enable no-console */
   isRunFromMainPackage = true;
 }
-
-let tsconfigPath;
 if (isRunFromMainPackage) {
-  tsconfigPath = path.resolve(__dirname, '../../../../tsconfig.json');
-} else {
-  tsconfigPath = path.resolve(__dirname, '../../tsconfig.json');
+  tsconfigPath = path.join(__dirname, '../../../../tsconfig.json');
 }
 
 module.exports = commonConfig.getStorybookWebpackConfig({
