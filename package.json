@@ -32,12 +32,15 @@
     "tslint": "tslint -c ./tslint.json -p ./",
     "eslint": "eslint **/*.js",
     "lint": "npm run tslint && npm run eslint",
-    "test": "jest --config=./config/jest/jest.config.js --watch --coverage",
-    "test:build": "jest --config=./config/jest/jest.config.prod.js --coverage",
-    "test:ci": "npm run test:build",
+    "test": "jest --config=./config/jest/jest.config.js --coverage",
+    "test:watch": "npm test -- --watch",
+    "test:ci": "npm run test",
+    "test:build:nmui-core": "jest --config=./config/jest/jest.config.prod.nmui-core.js --coverage",
+    "ci": "npm run lint && npm run test:ci",
     "storybook": "start-storybook -p 9001 -c ./config/.storybook",
-    "storybook:build": "build-storybook -c ./config/.storybook -o ./docs/storybook",
-    "build": "npm run lint && npm run test:ci && npm run storybook:build"
+    "storybook:build:nmui-core": "build-storybook -c ./packages/narr-material-ui-core/config/.storybook -o ./docs/narr-material-ui-core/storybook",
+    "build:nmui-core": "npm run test:build:nmui-core && npm run storybook:build:nmui-core",
+    "build:all": "npm run build:nmui-core"
   },
   "private": true,
   "lint-staged": {

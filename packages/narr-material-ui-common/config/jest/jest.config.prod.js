@@ -4,14 +4,14 @@ const getBaseConfig = require('./jest.config');
 module.exports = (cfg = {}) => {
   const baseConfig = getBaseConfig(cfg);
   const config = _.assign({}, baseConfig, {
-    coverageDirectory: './docs/coverage',
+    coverageDirectory: cfg.coverageDirectory,
     reporters: [
       'default',
       [
         './node_modules/jest-html-reporter',
         {
           pageTitle: 'Test Report',
-          outputPath: './docs/test-result/index.html',
+          outputPath: cfg.htmlReporterOutputPath,
         },
       ],
     ],
