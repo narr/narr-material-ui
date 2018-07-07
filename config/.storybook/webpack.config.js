@@ -1,10 +1,17 @@
 const path = require('path');
 const commonConfig = require('../../packages/narr-material-ui-common');
 
-const includePath = path.join(__dirname, '../../packages');
-const tsconfigPath = path.join(__dirname, '../../tsconfig.json');
+let includePath;
+const target = process.env.STORYBOOK_TARGET;
+if (target === 'core') {
+  includePath = path.join(
+    __dirname,
+    '../../packages/narr-material-ui-core/src'
+  );
+} else {
+  includePath = path.join(__dirname, '../../packages');
+}
 
 module.exports = commonConfig.getStorybookWebpackConfig({
   includePath,
-  tsconfigPath,
 });

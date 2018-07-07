@@ -11,15 +11,15 @@
   "bugs": {
     "url": "https://github.com/narr/narr-material-ui/issues"
   },
-  "homepage": "https://github.com/narr/narr-material-ui#readme",
+  "homepage": "https://github.com/narr/narr-material-ui/blob/master/README.md",
   "devDependencies": {
+    "cross-env": "^5.2.0",
     "eslint": "^5.0.1",
     "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-prettier": "^2.6.1",
+    "eslint-plugin-prettier": "^2.6.2",
     "husky": "^0.14.3",
     "lerna": "^2.11.0",
     "lint-staged": "^7.2.0",
-    "lodash": "^4.17.10",
     "prettier": "^1.13.7",
     "tslint": "^5.10.0",
     "tslint-config-prettier": "^1.13.0",
@@ -35,10 +35,10 @@
     "test": "jest --config=./config/jest/jest.config.js --coverage",
     "test:watch": "npm test -- --watch",
     "test:ci": "npm run test",
-    "test:build:nmui-core": "jest --config=./config/jest/jest.config.prod.nmui-core.js --coverage",
+    "test:build:nmui-core": "cross-env JEST_TARGET=core jest --config=./config/jest/jest.config.prod.js --coverage",
     "ci": "npm run lint && npm run test:ci",
     "storybook": "start-storybook -p 9001 -c ./config/.storybook",
-    "storybook:build:nmui-core": "build-storybook -c ./packages/narr-material-ui-core/config/.storybook -o ./docs/narr-material-ui-core/storybook",
+    "storybook:build:nmui-core": "cross-env STORYBOOK_TARGET=core build-storybook -c ./config/.storybook -o ./docs/narr-material-ui-core/storybook",
     "build:nmui-core": "npm run test:build:nmui-core && npm run storybook:build:nmui-core",
     "build:all": "npm run build:nmui-core"
   },
