@@ -6,8 +6,13 @@
     "type": "git",
     "url": "git+https://github.com/narr/narr-material-ui.git"
   },
+  "author": "https://github.com/narr",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/narr/narr-material-ui/issues"
+  },
+  "homepage": "https://github.com/narr/narr-material-ui/blob/master/packages/narr-material-ui-common/README.md",
+  "devDependencies": {
+    "lodash": "^4.17.10"
   }
 }
