@@ -2,22 +2,36 @@ import { action } from '@storybook/addon-actions';
 import { color, text } from '@storybook/addon-knobs/react';
 import { storiesOf } from '@storybook/react';
 import * as React from 'react';
+import { LiveEditor, LiveError, LivePreview, LiveProvider } from 'react-live';
+
 import Button from './Button';
 
 storiesOf('Core/Button', module)
   .add('with text', () => {
-    // this is comment
+    const scope = { action, Button, color, text };
+    const code = `
+      <Button bg={color('color', '#26E9E2')} onClick={action('button-clicked')}>
+        {text('Label', 'Hello Storybook')}
+      </Button>
+    `;
     return (
       <div
         className="wrapper"
         style={{ border: '1px solid #eee', padding: '20px' }}
       >
-        <span className="text">some info</span>
+        <span className="text">Some Info</span>
         <br />
         <br />
-        <Button onClick={action('button-clicked')}>
-          {text('Label', 'Hello Storybook')}
-        </Button>
+        <LiveProvider scope={scope} code={code}>
+          <LiveEditor />
+          <br />
+          <LiveError />
+          <LivePreview />
+        </LiveProvider>
+
+        <div className="for-prop-types" style={{ display: 'none' }}>
+          <Button onClick={action('')}>&nbsp;</Button>
+        </div>
       </div>
     );
   })
