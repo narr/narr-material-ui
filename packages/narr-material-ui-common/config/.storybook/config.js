@@ -2,8 +2,12 @@ import { addDecorator, configure } from '@storybook/react';
 import { setDefaults, withInfo } from '@storybook/addon-info';
 import { withKnobs } from '@storybook/addon-knobs/react';
 import { setOptions } from '@storybook/addon-options';
+import { LiveEditor, LiveError, LivePreview, LiveProvider } from 'react-live';
 
-export function setConfig({ requireContext } = {}) {
+export function setConfig({
+  requireContext,
+  propTablesExclude = [LiveEditor, LiveError, LivePreview, LiveProvider],
+} = {}) {
   // Option defaults:
   setOptions({
     /**
@@ -80,6 +84,7 @@ export function setConfig({ requireContext } = {}) {
   setDefaults({
     inline: true, // Displays info inline vs click button to view
     source: false, // Displays the source of story Component
+    propTablesExclude,
   });
 
   addDecorator((story, context) => withInfo()(story)(context));
