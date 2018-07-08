@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig",
+  "compilerOptions": {
+    "allowJs": false,
+    "declaration": true,
+    "listFiles": true,
+    "sourceMap": false
+  }
+}

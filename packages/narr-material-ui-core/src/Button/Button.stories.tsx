@@ -4,6 +4,16 @@ import { storiesOf } from '@storybook/react';
 import * as React from 'react';
 import { LiveEditor, LiveError, LivePreview, LiveProvider } from 'react-live';
 
+/**
+ * Test build files
+ *
+ * import everything but use only Button
+ * import { Button } from '../../dist';
+ *
+ * import only Button and use it
+ * import Button from '../../dist/Button';
+ *
+ */
 import Button from './Button';
 
 storiesOf('Core/Button', module)

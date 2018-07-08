@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.prod",
+  "compilerOptions": {
+    "outDir": "../../packages/narr-material-ui-core/dist",
+    "rootDir": "../../packages/narr-material-ui-core/src"
+  },
+  "include": [
+    "../../packages/narr-material-ui-core/src/**/*.tsx",
+    "../../packages/narr-material-ui-core/src/**/*.ts"
+  ],
+  "exclude": [
+    "../../packages/narr-material-ui-core/src/**/*.test.tsx",
+    "../../packages/narr-material-ui-core/src/**/*.stories.tsx"
+  ]
+}

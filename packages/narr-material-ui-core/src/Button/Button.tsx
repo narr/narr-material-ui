@@ -1,4 +1,5 @@
 import MuiButton from '@material-ui/core/Button';
+import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import styled from 'styled-components';
 
@@ -25,6 +26,12 @@ const Button: React.SFC<IProps> = ({ children, onClick, bg }) => {
 
 Button.defaultProps = {
   bg: '#ffa',
+};
+
+// This is requried to show wanrings for Props in a compiled js version of this component
+Button.propTypes = {
+  bg: PropTypes.string,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default Button;
