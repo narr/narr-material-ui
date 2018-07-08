@@ -12,6 +12,14 @@ npm i -g npx
 
 ```sh
 npm i
+npm run bootstrap
+```
+
+## Install for CI
+
+```sh
+// Install modules which is required only for Lint and Test
+npm i --no-optional
 ```
 
 ## Development
@@ -25,6 +33,12 @@ npm run storybook
 ```sh
 npx lerna add typescript --scope=package1 --dev # Install typescript in package1's devDependencies
 npx lerna add typescript --dev # Install typescript in all packages's devDependencies
+```
+
+## Script for CI
+
+```sh
+npm run ci
 ```
 
 ## Build gh-pages
