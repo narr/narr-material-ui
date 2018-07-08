@@ -40,7 +40,7 @@
     "ci": "npm run lint && npm run test:ci",
     "storybook": "start-storybook -p 9001 -c ./config/.storybook",
     "storybook:build:nmui-core": "cross-env STORYBOOK_TARGET=core build-storybook -c ./config/.storybook -o ./docs/narr-material-ui-core/storybook",
-    "build:nmui-core": "npm run test:build:nmui-core && npm run storybook:build:nmui-core",
+    "build:nmui-core": "rimraf ./docs/narr-material-ui-core && npm run test:build:nmui-core && npm run storybook:build:nmui-core",
     "build:all": "npm run lint && npm run build:nmui-core",
     "publish:nmui-core": "rimraf ./packages/narr-material-ui-core/dist && tsc -p ./config/typescript/tsconfig.prod.nmui-core.json",
     "publish:all": "npm run lint && npm run publish:nmui-core"
