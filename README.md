@@ -26,7 +26,7 @@ npm run storybook
 npx lerna bootstrap
 ```
 
-## run a npm script in a package
+## Run a npm script in a package
 
 ```sh
 npx lerna exec --scope narr-material-ui-core -- npm run storybook # run storybook in narr-material-ui-core package
