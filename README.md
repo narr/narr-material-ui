@@ -40,6 +40,12 @@ npx lerna add typescript --scope=package1 --dev # Install typescript in package1
 npx lerna add typescript --dev # Install typescript in all packages's devDependencies
 ```
 
+## Clean npm modules from all packages
+
+```sh
+npx lerna clean
+```
+
 ## Install for CI
 
 ```sh
