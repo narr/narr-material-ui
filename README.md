@@ -75,7 +75,15 @@ npm run ci
 ## Commit
 
 ```sh
+# Please use this script to make a commit because a commit message will be linted by commitlint.
 npm run cm
+```
+
+## Lint Commit for CI
+
+```sh
+# This will run "commitlint -f=FROM_REVISION -t=TO_REVISION"
+npm run ci:cmlint
 ```
 
 ## Generate gh-pages

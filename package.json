@@ -25,6 +25,8 @@
     "tslint-react": "^3.6.0"
   },
   "optionalDependencies": {
+    "@commitlint/cli": "^7.0.0",
+    "@commitlint/config-conventional": "^7.0.1",
     "commitizen": "^2.10.1",
     "cross-env": "^5.2.0",
     "cz-conventional-changelog": "^2.1.0",
@@ -33,8 +35,9 @@
     "rimraf": "^2.6.2"
   },
   "scripts": {
-    "precommit": "lint-staged",
     "cm": "git-cz",
+    "precommit": "lint-staged",
+    "commitmsg": "commitlint -E GIT_PARAMS",
     "tslint": "tslint -c ./tslint.json -p ./",
     "eslint": "eslint **/*.js",
     "lint": "npm run tslint && npm run eslint",
@@ -42,6 +45,7 @@
     "test:watch": "npm test -- --watch",
     "test:ci": "npm run test",
     "test:doc:nmui-core": "cross-env JEST_TARGET=core jest --config=./config/jest/jest.config.prod.js --coverage",
+    "ci:cmlint": "commitlint -f=origin/develop -t=develop",
     "ci": "npm run lint && npm run test:ci",
     "storybook": "start-storybook -p 9001 -c ./config/.storybook",
     "storybook:doc:nmui-core": "cross-env STORYBOOK_TARGET=core build-storybook -c ./config/.storybook -o ./docs/narr-material-ui-core/storybook",
@@ -54,15 +58,20 @@
     "pub:ci": "npm run pub -- --yes"
   },
   "private": true,
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,json,css,md}": [
       "prettier --write",
       "git add"
     ]
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }
