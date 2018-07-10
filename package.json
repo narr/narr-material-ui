@@ -13,7 +13,7 @@
   },
   "homepage": "https://github.com/narr/narr-material-ui/blob/master/README.md",
   "devDependencies": {
-    "eslint": "^5.0.1",
+    "eslint": "^5.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.2",
     "lerna": "^2.11.0",
@@ -25,27 +25,33 @@
     "tslint-react": "^3.6.0"
   },
   "optionalDependencies": {
+    "commitizen": "^2.10.1",
     "cross-env": "^5.2.0",
+    "cz-conventional-changelog": "^2.1.0",
     "husky": "^0.14.3",
     "lint-staged": "^7.2.0",
     "rimraf": "^2.6.2"
   },
   "scripts": {
     "precommit": "lint-staged",
+    "cm": "git-cz",
     "tslint": "tslint -c ./tslint.json -p ./",
     "eslint": "eslint **/*.js",
     "lint": "npm run tslint && npm run eslint",
     "test": "jest --config=./config/jest/jest.config.js --coverage",
     "test:watch": "npm test -- --watch",
     "test:ci": "npm run test",
-    "test:build:nmui-core": "cross-env JEST_TARGET=core jest --config=./config/jest/jest.config.prod.js --coverage",
+    "test:doc:nmui-core": "cross-env JEST_TARGET=core jest --config=./config/jest/jest.config.prod.js --coverage",
     "ci": "npm run lint && npm run test:ci",
     "storybook": "start-storybook -p 9001 -c ./config/.storybook",
-    "storybook:build:nmui-core": "cross-env STORYBOOK_TARGET=core build-storybook -c ./config/.storybook -o ./docs/narr-material-ui-core/storybook",
-    "build:nmui-core": "rimraf ./docs/narr-material-ui-core && npm run test:build:nmui-core && npm run storybook:build:nmui-core",
+    "storybook:doc:nmui-core": "cross-env STORYBOOK_TARGET=core build-storybook -c ./config/.storybook -o ./docs/narr-material-ui-core/storybook",
+    "doc:nmui-core": "rimraf ./docs/narr-material-ui-core && npm run test:doc:nmui-core && npm run storybook:doc:nmui-core",
+    "doc:all": "npm run lint && npm run doc:nmui-core",
+    "build:nmui-core": "rimraf ./packages/narr-material-ui-core/dist && tsc -p ./config/typescript/tsconfig.prod.nmui-core.json",
     "build:all": "npm run lint && npm run build:nmui-core",
-    "publish:nmui-core": "rimraf ./packages/narr-material-ui-core/dist && tsc -p ./config/typescript/tsconfig.prod.nmui-core.json",
-    "publish:all": "npm run lint && npm run publish:nmui-core"
+    "pub": "npx lerna publish --conventional-commits",
+    "pub:test": "npm run pub -- --skip-git --skip-npm",
+    "pub:ci": "npm run pub -- --yes"
   },
   "private": true,
   "lint-staged": {
@@ -53,5 +59,10 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
