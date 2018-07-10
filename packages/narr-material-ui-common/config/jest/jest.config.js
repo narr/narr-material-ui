@@ -1,7 +1,7 @@
 module.exports = ({
   rootDir = '../../',
-  testRootDir = './src',
-  collectCoverageFromRootDir = './src',
+  testRootDir = 'src',
+  collectCoverageFromRootDir = 'src',
   tsConfigFile = './node_modules/narr-material-ui-common/config/tsconfig.json',
 } = {}) => {
   const config = {
