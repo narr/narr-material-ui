@@ -1,2 +1,4 @@
 import Button from './Button';
-export { Button };
+import ButtonBase from './ButtonBase';
+import Theme from './Theme';
+export { Button, ButtonBase, Theme };
