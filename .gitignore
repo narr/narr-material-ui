@@ -69,3 +69,6 @@ package-lock.json
 # General
 tmp
 temp
+
+# Build
+definitions.js
