@@ -70,3 +70,7 @@ ButtonBase.defaultProps = {
 ButtonBase.displayName = 'ButtonBase';
 
 export default ButtonBase;
+
+/* istanbul ignore next */
+// tslint:disable-next-line no-empty
+function istanbulIgnoreNext() {}

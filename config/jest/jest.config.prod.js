@@ -17,4 +17,4 @@ if (!config) {
   throw new Error('Invalid Jest Build Configuration..!!');
 }
 
-module.exports = commonConfig.getJestConfigProd(config);
+module.exports = commonConfig.getJestConfig(config);
