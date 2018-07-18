@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.1.1"></a>
+## [6.1.1](https://github.com/narr/narr-material-ui/compare/narr-material-ui-common@6.1.0...narr-material-ui-common@6.1.1) (2018-07-18)
+
+
+### Bug Fixes
+
+* **root pkg-common pkg-core:** improve Storybook compile speed ([03dfe8a](https://github.com/narr/narr-material-ui/commit/03dfe8a))
+* **root pkg-common pkg-core:** improve test compile speed ([d6f317c](https://github.com/narr/narr-material-ui/commit/d6f317c))
+
+
+
+
 <a name="6.1.0"></a>
 # [6.1.0](https://github.com/narr/narr-material-ui/compare/narr-material-ui-common@6.0.2...narr-material-ui-common@6.1.0) (2018-07-16)
 
