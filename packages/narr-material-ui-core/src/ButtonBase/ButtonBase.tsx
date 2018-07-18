@@ -71,6 +71,9 @@ ButtonBase.displayName = 'ButtonBase';
 
 export default ButtonBase;
 
-/* istanbul ignore next */
+/* istanbul ignore next: test ignore comment */
 // tslint:disable-next-line no-empty
 function istanbulIgnoreNext() {}
+
+// tslint:disable-next-line no-console
+console.log(istanbulIgnoreNext);
