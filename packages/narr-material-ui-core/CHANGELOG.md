@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.2"></a>
+## [1.1.2](https://github.com/narr/narr-material-ui/compare/narr-material-ui-core@1.1.1...narr-material-ui-core@1.1.2) (2018-07-18)
+
+
+### Bug Fixes
+
+* **pkg-core:** narr-1 typo error ([9961473](https://github.com/narr/narr-material-ui/commit/9961473))
+
+
+
+
 <a name="1.1.1"></a>
 ## [1.1.1](https://github.com/narr/narr-material-ui/compare/narr-material-ui-core@1.1.0...narr-material-ui-core@1.1.1) (2018-07-18)
 
