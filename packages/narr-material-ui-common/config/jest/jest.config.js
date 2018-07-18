@@ -1,8 +1,10 @@
 module.exports = ({
   rootDir = '../../',
   testRootDir = 'src',
-  collectCoverageFromRootDir = 'src',
+  collectCoverageFromRootDir,
   tsConfigFile = './node_modules/narr-material-ui-common/config/tsconfig.json',
+  coverageDirectory = './tmp/coverage',
+  htmlReporterOutputPath,
 } = {}) => {
   const config = {
     rootDir,
@@ -12,19 +14,13 @@ module.exports = ({
     },
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
     modulePathIgnorePatterns: ['<rootDir>/tmp'],
+    watchPathIgnorePatterns: ['.*?\\.jsx?$'],
     globals: {
       'ts-jest': {
         tsConfigFile,
-        babelConfig: {
-          presets: ['env'],
-        },
       },
     },
-    collectCoverageFrom: [
-      `${collectCoverageFromRootDir}/**/*.{ts,tsx}`,
-      '!**/*.stories.{ts,tsx}',
-    ],
-    coverageDirectory: './tmp/coverage',
+    coverageDirectory,
     coverageThreshold: {
       global: {
         statements: 100,
@@ -36,5 +32,27 @@ module.exports = ({
     setupTestFrameworkScriptFile: 'jest-enzyme',
     testEnvironment: 'enzyme',
   };
+
+  if (collectCoverageFromRootDir) {
+    config.collectCoverageFrom = [
+      `${collectCoverageFromRootDir}/**/*.{ts,tsx}`,
+      '!**/index.{ts,tsx}',
+      '!**/*.stories.{ts,tsx}',
+    ];
+  }
+
+  if (htmlReporterOutputPath) {
+    config.reporters = [
+      'default',
+      [
+        './node_modules/jest-html-reporter',
+        {
+          pageTitle: 'Test Report',
+          outputPath: config.htmlReporterOutputPath,
+        },
+      ],
+    ];
+  }
+
   return config;
 };

@@ -41,9 +41,9 @@
     "tslint": "tslint -c ./tslint.json -p ./",
     "eslint": "eslint **/*.js",
     "lint": "npm run tslint && npm run eslint",
-    "test": "jest --config=./config/jest/jest.config.js --coverage",
-    "test:watch": "npm test -- --watch",
-    "test:ci": "npm run test",
+    "test": "jest --config=./config/jest/jest.config.ci.js --coverage",
+    "test:watch": "jest --config=./config/jest/jest.config.js --coverage --watch",
+    "test:ci": "npm run test -- --bail",
     "test:doc:nmui-core": "cross-env JEST_TARGET=core jest --config=./config/jest/jest.config.prod.js --coverage",
     "ci:cmlint": "commitlint -f=origin/develop -t=develop",
     "ci": "npm run lint && npm run test:ci",
@@ -72,6 +72,19 @@
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
-    ]
+    ],
+    "rules": {
+      "references-empty": [
+        2,
+        "never"
+      ]
+    },
+    "parserPreset": {
+      "parserOpts": {
+        "issuePrefixes": [
+          "narr-"
+        ]
+      }
+    }
   }
 }
