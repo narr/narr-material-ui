@@ -1,11 +1,10 @@
-import { addDecorator, configure } from '@storybook/react';
+import { addDecorator } from '@storybook/react';
 import { setDefaults, withInfo } from '@storybook/addon-info';
 import { withKnobs } from '@storybook/addon-knobs/react';
 import { setOptions } from '@storybook/addon-options';
 import { LiveEditor, LiveError, LivePreview, LiveProvider } from 'react-live';
 
 export function setConfig({
-  requireContext,
   propTablesExclude = [LiveEditor, LiveError, LivePreview, LiveProvider],
 } = {}) {
   // Option defaults:
@@ -14,7 +13,7 @@ export function setConfig({
      * name to display in the top left corner
      * @type {String}
      */
-    name: 'Storybook',
+    name: 'Narr-Material-UI Storybook',
     /**
      * URL for name in top left corner to link to
      * @type {String}
@@ -90,12 +89,4 @@ export function setConfig({
   addDecorator((story, context) => withInfo()(story)(context));
   // this should be placed after withInfo decorator to show Story Source correctly
   addDecorator(withKnobs);
-
-  configure(getLoadStoriesFn(requireContext), module);
-}
-
-function getLoadStoriesFn(requireContext) {
-  return () => {
-    requireContext.keys().forEach(filename => requireContext(filename));
-  };
 }

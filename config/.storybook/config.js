@@ -1,3 +1,4 @@
+import { configure } from '@storybook/react';
 import { setStorybookConfig } from '../../packages/narr-material-ui-common/es6';
 
 const target = process.env.STORYBOOK_TARGET;
@@ -12,6 +13,8 @@ if (target === 'core') {
   requireContext = require.context('../../packages', true, /\.stories\.tsx$/);
 }
 
-setStorybookConfig({
-  requireContext,
-});
+setStorybookConfig();
+
+configure(() => {
+  requireContext.keys().forEach(filename => requireContext(filename));
+}, module);
