@@ -21,9 +21,10 @@ var __rest =
         if (e.indexOf(p[i]) < 0) t[p[i]] = s[p[i]];
     return t;
   };
-import { withStyles } from '@material-ui/core/styles';
-import * as PropTypes from 'prop-types';
-import * as React from 'react';
+Object.defineProperty(exports, '__esModule', { value: true });
+var styles_1 = require('@material-ui/core/styles');
+var PropTypes = require('prop-types');
+var React = require('react');
 var styles = function(theme) {
   var color = 'white';
   if (theme.bootstrap && theme.bootstrap.color) {
@@ -61,7 +62,7 @@ var ClassNames = function(_a) {
 // FIXME: with 'withStyles' Prop Types in Storybook are not correctly generated.
 // to provide the theme object to the component as a property, pass { withTheme: true }
 // https://material-ui.com/customization/css-in-js/#withstyles-styles-options-higher-order-component
-var ButtonBase = withStyles(styles)(ClassNames);
+var ButtonBase = styles_1.withStyles(styles)(ClassNames);
 // This is requried to show wanrings for Props in a compiled js version of this component.
 ButtonBase.propTypes = {
   classes: PropTypes.objectOf(PropTypes.string),
@@ -72,4 +73,9 @@ ButtonBase.defaultProps = {
   title: 'this is a default browser tooltip',
 };
 ButtonBase.displayName = 'ButtonBase';
-export default ButtonBase;
+exports.default = ButtonBase;
+/* istanbul ignore next: test ignore comment */
+// tslint:disable-next-line no-empty
+function istanbulIgnoreNext() {}
+// tslint:disable-next-line no-console
+console.log(istanbulIgnoreNext);

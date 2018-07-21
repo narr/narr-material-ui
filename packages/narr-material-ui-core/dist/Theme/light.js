@@ -1,11 +1,12 @@
-import blue from '@material-ui/core/colors/blue';
-import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
-var lightTheme = createMuiTheme({
+Object.defineProperty(exports, '__esModule', { value: true });
+var blue_1 = require('@material-ui/core/colors/blue');
+var createMuiTheme_1 = require('@material-ui/core/styles/createMuiTheme');
+var lightTheme = createMuiTheme_1.default({
   bootstrap: {
-    color: blue,
+    color: blue_1.default,
   },
   palette: {
     type: 'light',
   },
 });
-export default lightTheme;
+exports.default = lightTheme;

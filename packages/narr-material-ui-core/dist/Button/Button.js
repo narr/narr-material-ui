@@ -31,12 +31,13 @@ var __rest =
         if (e.indexOf(p[i]) < 0) t[p[i]] = s[p[i]];
     return t;
   };
-import MuiButton from '@material-ui/core/Button';
-import { withStyles } from '@material-ui/core/styles';
-import * as _ from 'lodash';
-import * as PropTypes from 'prop-types';
-import * as React from 'react';
-import styled from 'styled-components';
+Object.defineProperty(exports, '__esModule', { value: true });
+var Button_1 = require('@material-ui/core/Button');
+var styles_1 = require('@material-ui/core/styles');
+var _ = require('lodash');
+var PropTypes = require('prop-types');
+var React = require('react');
+var styled_components_1 = require('styled-components');
 var styles = function() {
   return {
     root: {
@@ -60,7 +61,7 @@ var ClassesNesting = function(_a) {
       'div',
       { className: classes.wrapper + ' ' + className },
       React.createElement(
-        MuiButton,
+        Button_1.default,
         __assign(
           { classes: muiClasses, variant: 'contained', color: 'secondary' },
           otherProps
@@ -69,8 +70,8 @@ var ClassesNesting = function(_a) {
     )
   );
 };
-var WithStyleButton = withStyles(styles)(ClassesNesting);
-var Button = styled(WithStyleButton)(
+var WithStyleButton = styles_1.withStyles(styles)(ClassesNesting);
+var Button = styled_components_1.default(WithStyleButton)(
   templateObject_1 ||
     (templateObject_1 = __makeTemplateObject(
       ['\n  && {\n    background: ', ';\n  }\n'],
@@ -90,5 +91,5 @@ Button.defaultProps = {
   bg: '#ffa',
 };
 Button.displayName = 'Button';
-export default Button;
+exports.default = Button;
 var templateObject_1;

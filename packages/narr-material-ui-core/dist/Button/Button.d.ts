@@ -30,7 +30,7 @@ declare const Button: import('../../../../node_modules/styled-components').Style
         'root' | 'wrapper'
       ><'root' | 'wrapper'>
     >,
-    'classes' | 'innerRef' | 'className'
+    'className' | 'classes' | 'innerRef'
   > & {
     theme?: any;
   } & ButtonProps
