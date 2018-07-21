@@ -1,3 +1,4 @@
+import { MuiThemeProvider } from '@material-ui/core/styles';
 import { addDecorator } from '@storybook/react';
 import { setDefaults, withInfo } from '@storybook/addon-info';
 import { withKnobs } from '@storybook/addon-knobs/react';
@@ -5,7 +6,13 @@ import { setOptions } from '@storybook/addon-options';
 import { LiveEditor, LiveError, LivePreview, LiveProvider } from 'react-live';
 
 export function setConfig({
-  propTablesExclude = [LiveEditor, LiveError, LivePreview, LiveProvider],
+  propTablesExclude = [
+    LiveEditor,
+    LiveError,
+    LivePreview,
+    LiveProvider,
+    MuiThemeProvider,
+  ],
 } = {}) {
   // Option defaults:
   setOptions({

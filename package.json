@@ -74,17 +74,11 @@
       "@commitlint/config-conventional"
     ],
     "rules": {
-      "references-empty": [
+      "header-max-length": [
         2,
-        "never"
+        "always",
+        90
       ]
-    },
-    "parserPreset": {
-      "parserOpts": {
-        "issuePrefixes": [
-          "narr-"
-        ]
-      }
     }
   }
 }

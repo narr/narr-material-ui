@@ -1,2 +1,3 @@
-import Button from './Button';
-export default Button;
+Object.defineProperty(exports, '__esModule', { value: true });
+var Button_1 = require('./Button');
+exports.default = Button_1.default;
