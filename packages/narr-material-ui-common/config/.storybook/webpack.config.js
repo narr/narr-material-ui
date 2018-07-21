@@ -18,7 +18,6 @@ module.exports = ({ includePath, tsconfigPath = defaultTsconfigPath } = {}) => {
             transpileOnly: true,
           },
         },
-        require.resolve('react-docgen-typescript-loader'),
       ],
     });
     defaultConfig.resolve.extensions.push('.ts', '.tsx');
