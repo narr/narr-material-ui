@@ -39,7 +39,7 @@
     "precommit": "lint-staged",
     "commitmsg": "commitlint -E GIT_PARAMS",
     "tslint": "tslint -c ./tslint.json -p ./",
-    "eslint": "eslint **/*.js",
+    "eslint": "eslint \"**/*.js\"",
     "lint": "npm run tslint && npm run eslint",
     "test": "jest --config=./config/jest/jest.config.ci.js --coverage",
     "test:watch": "jest --config=./config/jest/jest.config.js --coverage --watch",
