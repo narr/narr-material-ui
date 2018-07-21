@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.1.2"></a>
+## [6.1.2](https://github.com/narr/narr-material-ui/compare/narr-material-ui-common@6.1.1...narr-material-ui-common@6.1.2) (2018-07-21)
+
+
+### Bug Fixes
+
+* **pkg-common:** add react-docgen-typescript-loader again for Prop Types ([9fb1fda](https://github.com/narr/narr-material-ui/commit/9fb1fda)), closes [#41](https://github.com/narr/narr-material-ui/issues/41)
+* **pkg-common:** make a compiled js from Typescript available in Storybook ([8855214](https://github.com/narr/narr-material-ui/commit/8855214)), closes [#41](https://github.com/narr/narr-material-ui/issues/41)
+* **root:** narr-41 [#41](https://github.com/narr/narr-material-ui/issues/41) the report path ([6bd0dcd](https://github.com/narr/narr-material-ui/commit/6bd0dcd))
+
+
+### Performance Improvements
+
+* **pkg-common:** remove react-docgen-typescript-loader ([1e4499d](https://github.com/narr/narr-material-ui/commit/1e4499d)), closes [#41](https://github.com/narr/narr-material-ui/issues/41)
+
+
+
+
 <a name="6.1.1"></a>
 ## [6.1.1](https://github.com/narr/narr-material-ui/compare/narr-material-ui-common@6.1.0...narr-material-ui-common@6.1.1) (2018-07-18)
 
