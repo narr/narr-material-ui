@@ -1,0 +1,17 @@
+# https://docs.npmjs.com/misc/developers#keeping-files-out-of-your-package
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+
+# General
+tmp
+temp
+
+# Build
