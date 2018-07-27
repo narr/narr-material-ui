@@ -50,9 +50,9 @@
     "storybook": "start-storybook -p 9001 -c ./config/.storybook",
     "storybook:doc:nmui-core": "cross-env STORYBOOK_TARGET=core build-storybook -c ./config/.storybook -o ./docs/narr-material-ui-core/storybook",
     "doc:nmui-core": "rimraf ./docs/narr-material-ui-core && npm run test:doc:nmui-core && npm run storybook:doc:nmui-core",
-    "doc:all": "npm run lint && npm run doc:nmui-core",
+    "doc:all": "npm run doc:nmui-core",
     "build:nmui-core": "rimraf ./packages/narr-material-ui-core/dist && tsc -p ./config/typescript/tsconfig.prod.nmui-core.json",
-    "build:all": "npm run lint && npm run build:nmui-core",
+    "build:all": "npm run build:nmui-core",
     "pub": "lerna publish --conventional-commits",
     "pub:test": "npm run pub -- --skip-git --skip-npm",
     "pub:ci": "npm run pub -- --yes"
