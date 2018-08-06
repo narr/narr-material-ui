@@ -1,3 +1,7 @@
 {
-  "extends": "./packages/narr-material-ui-common/config/tsconfig"
+  "extends": "./packages/narr-material-ui-common/config/tsconfig",
+  "include": [
+    "./packages/narr-material-ui-core/src/**/*.tsx",
+    "./packages/narr-material-ui-core/src/**/*.ts"
+  ]
 }
