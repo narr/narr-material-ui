@@ -54,7 +54,7 @@
     "doc:all": "npm run doc:nmui-core",
     "build:nmui-core": "rimraf ./packages/narr-material-ui-core/dist && tsc -p ./config/typescript/tsconfig.prod.nmui-core.json",
     "build:all": "npm run build:nmui-core",
-    "pub": "lerna publish --conventional-commits",
+    "pub": "npm run build:all && lerna publish --conventional-commits",
     "pub:test": "npm run pub -- --skip-git --skip-npm",
     "pub:ci": "npm run pub -- --yes"
   },

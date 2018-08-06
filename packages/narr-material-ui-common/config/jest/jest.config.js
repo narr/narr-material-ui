@@ -31,6 +31,7 @@ module.exports = ({
     },
     setupTestFrameworkScriptFile: 'jest-enzyme',
     testEnvironment: 'enzyme',
+    testURL: 'http://localhost/',
   };
 
   if (collectCoverageFromRootDir) {
