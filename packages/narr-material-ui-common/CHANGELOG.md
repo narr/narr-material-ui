@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.1.5"></a>
+## [6.1.5](https://github.com/narr/narr-material-ui/compare/narr-material-ui-common@6.1.4...narr-material-ui-common@6.1.5) (2018-08-06)
+
+
+
+
+**Note:** Version bump only for package narr-material-ui-common
+
 <a name="6.1.4"></a>
 ## [6.1.4](https://github.com/narr/narr-material-ui/compare/narr-material-ui-common@6.1.3...narr-material-ui-common@6.1.4) (2018-08-06)
 
