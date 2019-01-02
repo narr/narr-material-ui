@@ -1,17 +1,12 @@
-const path = require('path');
-const commonConfig = require('../../packages/narr-material-ui-common');
-
-let includePath;
-const target = process.env.STORYBOOK_TARGET;
-if (target === 'core') {
-  includePath = path.join(
-    __dirname,
-    '../../packages/narr-material-ui-core/src'
-  );
-} else {
-  includePath = path.join(__dirname, '../../packages');
-}
-
-module.exports = commonConfig.getStorybookWebpackConfig({
-  includePath,
-});
+module.exports = (baseConfig, env, config) => {
+  config.module.rules.push({
+    test: /\.(ts|tsx)$/,
+    use: [
+      {
+        loader: require.resolve('awesome-typescript-loader'),
+      },
+    ],
+  });
+  config.resolve.extensions.push('.ts', '.tsx');
+  return config;
+};

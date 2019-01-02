@@ -1,7 +1,22 @@
 {
-  "extends": "./packages/narr-material-ui-common/config/tsconfig",
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "sourceMap": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitUseStrict": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true
+  },
   "include": [
-    "./packages/narr-material-ui-core/src/**/*.tsx",
-    "./packages/narr-material-ui-core/src/**/*.ts"
+    "./packages/narr-material-ui-core/src/**/*.ts",
+    "./packages/narr-material-ui-core/src/**/*.tsx"
   ]
 }
