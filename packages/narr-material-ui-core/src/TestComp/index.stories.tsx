@@ -5,7 +5,6 @@ import { LiveEditor, LiveError, LivePreview, LiveProvider } from 'react-live';
 
 // Test Build results
 // import { TestComp } from 'narr-material-ui-core/dist/TestComp';
-// import { TestComp } from 'narr-material-ui-core/TestComp';
 import { lightTheme } from '../Theme/light';
 import { TestComp } from './index';
 
