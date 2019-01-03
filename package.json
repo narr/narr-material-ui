@@ -23,6 +23,7 @@
     "@types/storybook__react": "^4.0.0",
     "awesome-typescript-loader": "^5.2.1",
     "commitizen": "^3.0.5",
+    "cpy-cli": "^2.0.0",
     "cz-conventional-changelog": "^2.1.0",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
@@ -62,6 +63,7 @@
     "ci": "npm run lint && npm run test:ci",
     "prebuild": "rimraf ./packages/narr-material-ui-core/dist",
     "build": "tsc -p ./config/typescript/tsconfig.prod.json",
+    "build:static": "rimraf ./static && npm run doc:build && npm run test:ci && cpy ./index.html ./static",
     "pub": "npm run build && lerna publish --conventional-commits",
     "pub:test": "npm run pub -- --skip-git --skip-npm",
     "pub:ci": "npm run pub -- --yes"
