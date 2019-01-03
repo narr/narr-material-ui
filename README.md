@@ -68,4 +68,4 @@ npm run pub
 
 ## Demo
 
-https://narr.github.io/narr-material-ui/
+https://narr-material-ui.netlify.com/
