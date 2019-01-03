@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1546422784431" clover="3.2.0">
+  <project timestamp="1546422784431" name="All files">
+    <metrics statements="22" coveredstatements="18" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2" elements="28" coveredelements="24" complexity="0" loc="22" ncloc="22" packages="2" files="4" classes="4">
+      <package name="TestComp">
+        <metrics statements="14" coveredstatements="14" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <file name="index.tsx" path="C:\programming\project\narr-material-ui\packages\narr-material-ui-core\src\TestComp\index.tsx">
+          <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+        </file>
+        <file name="styles.ts" path="C:\programming\project\narr-material-ui\packages\narr-material-ui-core\src\TestComp\styles.ts">
+          <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="5" count="2" type="cond" truecount="4" falsecount="0"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="Theme">
+        <metrics statements="8" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="dark.ts" path="C:\programming\project\narr-material-ui\packages\narr-material-ui-core\src\Theme\dark.ts">
+          <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="16" count="0" type="stmt"/>
+        </file>
+        <file name="light.ts" path="C:\programming\project\narr-material-ui\packages\narr-material-ui-core\src\Theme\light.ts">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

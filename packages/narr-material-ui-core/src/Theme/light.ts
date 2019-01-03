@@ -8,6 +8,9 @@ const lightTheme = createMuiTheme({
   palette: {
     type: 'light',
   },
+  typography: {
+    useNextVariants: true,
+  },
 });
 
-export default lightTheme;
+export { lightTheme };

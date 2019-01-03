@@ -1,4 +1,4 @@
 !.storybook
-docs/**/*.js
+static/**/*.js
 tmp/**/*
 dist

@@ -1,6 +1,2 @@
-const commonConfig = require('../../packages/narr-material-ui-common');
-
-module.exports = commonConfig.getJestConfig({
-  testRootDir: 'packages',
-  tsConfigFile: './tsconfig.json',
-});
+const getJestConfig = require('./jest.config.base');
+module.exports = getJestConfig();

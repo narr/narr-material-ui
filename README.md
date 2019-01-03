@@ -2,12 +2,6 @@
 
 My UI components using Typescript+React+Material-UI
 
-## Prerequisite
-
-```sh
-npm i -g npx
-```
-
 ## Install
 
 ```sh
@@ -17,53 +11,19 @@ npm i
 ## Development
 
 ```sh
-npm run storybook
-```
-
-## Install dependencies in all packages
-
-```sh
-# If you want this command, make sure that you remove node_modules from root folder first.
-npx lerna bootstrap
-```
-
-## Run a npm script in a package
-
-```sh
-npx lerna exec --scope narr-material-ui-core -- npm run storybook # run storybook in narr-material-ui-core package
-npx lerna exec -- npm i # run npm i in all packages
-```
-
-## Add a dependency to packages
-
-```sh
-npx lerna add typescript --scope=package1 --dev # Install typescript in package1's devDependencies
-npx lerna add typescript --dev # Install typescript in all packages's devDependencies
-```
-
-## Clean npm modules from all packages
-
-```sh
-npx lerna clean
-```
-
-## Install for CI
-
-```sh
-# Install modules which is required only for Lint and Test
-npm i --no-optional
-```
-
-## Lint
-
-```sh
-npm run lint
+npm run doc
 ```
 
 ## Test
 
 ```sh
 npm run test
+```
+
+## Lint
+
+```sh
+npm run lint
 ```
 
 ## Script for CI
@@ -90,14 +50,14 @@ npm run ci:cmlint
 
 ```sh
 # Generate gh-pages for narr-material-ui-core
-npm run doc:nmui-core
+npm run doc:build
 ```
 
 ## Build a package
 
 ```sh
 # make files for publish in narr-material-ui-core
-npm run build:nmui-core
+npm run build
 ```
 
 ## Publish packages

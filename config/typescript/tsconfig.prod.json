@@ -4,6 +4,11 @@
     "allowJs": false,
     "declaration": true,
     "listFiles": true,
-    "sourceMap": false
-  }
+    "sourceMap": false,
+    "outDir": "../../packages/narr-material-ui-core/dist"
+  },
+  "exclude": [
+    "../../packages/narr-material-ui-core/src/**/*.test.tsx",
+    "../../packages/narr-material-ui-core/src/**/*.stories.tsx"
+  ]
 }

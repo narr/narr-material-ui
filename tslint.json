@@ -9,8 +9,5 @@
     "prettier": true,
     "max-file-line-count": [true, 400],
     "interface-name": [true, "never-prefix"]
-  },
-  "linterOptions": {
-    "exclude": ["**/*.js", "**/tmp/**/*", "**/.storybook/**/*"]
   }
 }
