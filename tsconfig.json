@@ -1,22 +1,27 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "es5",
-    "moduleResolution": "node",
-    "jsx": "react",
-    "sourceMap": true,
+    "allowJs": true,
+    "baseUrl": ".",
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "noEmit": true,
     "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noImplicitUseStrict": true,
     "noUnusedLocals": true,
+    "paths": {
+      "project-root/*": ["./*"]
+    },
     "skipLibCheck": true,
-    "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": true
+    "strict": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "target": "esnext",
+    "typeRoots": ["./node_modules/@types"]
   },
   "include": [
-    "./packages/narr-material-ui-core/src/**/*.ts",
-    "./packages/narr-material-ui-core/src/**/*.tsx"
+    "./node_modules/@testing-library/jest-dom/extend-expect.d.ts",
+    "./@types/**/*.ts",
+    "./packages/**/*.ts",
+    "./packages/**/*.tsx"
   ]
 }

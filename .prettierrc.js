@@ -20,4 +20,5 @@ module.exports = {
    */
   trailingComma: 'es5',
   useTabs: false, // Indent lines with tabs instead of spaces.
+  endOfLine: 'lf',
 };

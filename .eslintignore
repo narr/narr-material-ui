@@ -1,4 +1,7 @@
 !.storybook
-static/**/*.js
-tmp/**/*
+tmp
 dist
+public
+static
+docs
+CHANGELOG.md

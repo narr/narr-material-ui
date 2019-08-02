@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig",
+  "compilerOptions": {
+    "allowJs": false,
+    "declaration": true,
+    "listFiles": true,
+    "noEmit": false,
+    "target": "es6"
+  },
+  "exclude": [
+    "../../**/*.test.tsx",
+    "../../**/*.stories.tsx"
+  ]
+}
