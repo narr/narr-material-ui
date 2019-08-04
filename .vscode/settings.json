@@ -1,0 +1,17 @@
+{
+  "files.eol": "\n",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "typescriptreact",
+      "autoFix": true
+    }
+  ],
+  "turboConsoleLog.quote": "'",
+  "turboConsoleLog.addSemicolonInTheEnd": true
+}
