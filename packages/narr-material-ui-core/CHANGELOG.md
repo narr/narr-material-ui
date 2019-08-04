@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/narr/narr-material-ui/compare/narr-material-ui-core@2.0.0...narr-material-ui-core@2.0.1) (2019-08-04)
+
+**Note:** Version bump only for package narr-material-ui-core
+
+
+
+
+
+
 # [2.0.0](https://github.com/narr/narr-material-ui/compare/narr-material-ui-core@1.1.6...narr-material-ui-core@2.0.0) (2019-01-02)
 
 ### Features
