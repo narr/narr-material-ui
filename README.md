@@ -11,13 +11,13 @@ npm i
 ## Development
 
 ```sh
-npm run doc
+npm start
 ```
 
 ## Test
 
 ```sh
-npm run test
+npm test
 ```
 
 ## Lint
@@ -26,7 +26,7 @@ npm run test
 npm run lint
 ```
 
-## Script for CI
+## CI
 
 ```sh
 npm run ci
@@ -39,24 +39,22 @@ npm run ci
 npm run cm
 ```
 
-## Lint Commit for CI
+## Lint commit messages for CI
 
 ```sh
 # This will run "commitlint -f=FROM_REVISION -t=TO_REVISION"
 npm run ci:cmlint
 ```
 
-## Generate gh-pages
+## Generate demo pages
 
 ```sh
-# Generate gh-pages for narr-material-ui-core
-npm run doc:build
+npm run doc
 ```
 
-## Build a package
+## Build packages
 
 ```sh
-# make files for publish in narr-material-ui-core
 npm run build
 ```
 
