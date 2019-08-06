@@ -13,5 +13,6 @@
     }
   ],
   "turboConsoleLog.quote": "'",
-  "turboConsoleLog.addSemicolonInTheEnd": true
+  "turboConsoleLog.addSemicolonInTheEnd": true,
+  "typescript.tsdk": "node_modules\\typescript\\lib"
 }
